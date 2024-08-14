@@ -1,0 +1,57 @@
+@import url("./fonts.css");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: "Inter", sans-serif;
+}
+
+@layer components {
+  .container {
+    @apply mx-auto w-full max-w-7xl px-4;
+  }
+  .link {
+    @apply text-base text-primary;
+  }
+  .primary-btn {
+    @apply rounded-lg bg-green px-5 py-3 text-base text-white lg:px-6 lg:py-3;
+  }
+  .secondary-btn {
+    @apply rounded-lg border-2 border-green bg-transparent px-6 py-3 text-base capitalize text-green;
+  }
+  .title {
+    @apply text-4xl font-medium leading-[120%] text-primary md:leading-[100%] lg:text-5xl xl:text-[56px] xl:leading-[120%];
+  }
+}
+.animation {
+animation: spin;
+animation-duration: 1s;
+animation-delay: 0s;
+animation-iteration-count: 20;
+}
+
+
+@keyframes spin {
+/* 0%{
+  transform: rotate(12deg);
+}
+20% {
+  transform: rotate(25deg);
+}
+50% {
+  transform: rotate(45deg); 
+}
+70% {
+  transform: rotate(60deg);
+}
+100% {
+  transform: rotate(80deg);
+} */
+from {
+  transform: rotate(0deg)
+}
+to {
+  transform: rotate(360deg)
+}
+}
